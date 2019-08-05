@@ -41,10 +41,8 @@
 #
 
 clear
-echo "////////////////////////"
-echo "// Subnodes Mesh Point"
-echo "// ~~~~~~~~~~~~~~~~~~~~"
-echo ""
+base64 -d <<< "H4sIAD+SR10AA51QOQ7DMAzb8wquXaoPBH1GJgHuQ/T4ipScutdSGQgpiaDpYMNSo0G1jKsdU9HbU5af1SbyCKQgN589POClYJ/cNBWx7zbRWQypqv7CnbdNqBV1HJT9SqMsTON1Oyxwxf1Ms0/HG3Z82NRrBEpdr+GlBEV7pqHU0tzfbOqnNdgwDn04oxWIam/JW5SrF5v/a3sAWuumOfIBAAA=" | gunzip
+echo ""                                                                    
 
 read -p "This installation script will add a mesh point to your Subnodes set up. It is assumed that you have already installed a Subnodes access point and now wish to add a mesh point. Make sure you plugged a second wireless radio into your Raspberry Pi. Press any key to continue..."
 echo ""

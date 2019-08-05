@@ -59,10 +59,8 @@ REV="$(cat /proc/cpuinfo | grep 'Revision' | awk '{print $3}')"
 #
 
 clear
-echo "////////////////////////"
-echo "// Welcome to Subnodes!"
-echo "// ~~~~~~~~~~~~~~~~~~~~"
-echo ""
+base64 -d <<< "H4sIAD+SR10AA51QOQ7DMAzb8wquXaoPBH1GJgHuQ/T4ipScutdSGQgpiaDpYMNSo0G1jKsdU9HbU5af1SbyCKQgN589POClYJ/cNBWx7zbRWQypqv7CnbdNqBV1HJT9SqMsTON1Oyxwxf1Ms0/HG3Z82NRrBEpdr+GlBEV7pqHU0tzfbOqnNdgwDn04oxWIam/JW5SrF5v/a3sAWuumOfIBAAA=" | gunzip
+echo ""                                                                    
 
 read -p "This installation script will install the latest arm version of node.js with a chatroom, set up a wireless access point and captive portal, and provide the option of configuring a BATMAN-ADV mesh point. Make sure you have one (or two, if installing the additional mesh point) USB wifi radios connected to your Raspberry Pi before proceeding. Press any key to continue..."
 echo ""
