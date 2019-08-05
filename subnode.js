@@ -1,28 +1,15 @@
-/**
- * Subnodes is an open source project that enables people to easily set up portable access points for serving content.
- * Author : Sarah Grant
- * Github : http://github.com/chootka/subnodes
- * License: AGPLv3 http://www.gnu.org/licenses/agpl-3.0.html
- */
+var express = require("express");
 
-/**
- * Module dependencies.
- */
-var express   = require('express'),
-	app       = express(),
-  	http      = require('http'),
-  	server    = http.createServer(app),
-  	io        = require('socket.io').listen(server);
+var app = express();
 
-  	app.root  = __dirname;
-  	app.set('port', process.env.PORT || 8080);
+app.get('/', function(req, res) {
+	res.send("OK!");
+});
 
-// create the application
-require('./app/config')(app, express);
-require('./app/server/router')(app);
-require('./app/server/modules/chat')(io);
+app.get('/foo', function(req, res) {
+	res.send("bar");
+});
 
-// boot up HTTP server on port 80
-server.listen(app.get('port'), function () {
-  console.log('Express server listening on port ' + app.get('port'))
-})
+app.listen(80, function() {
+	console.log('Listening port 80');
+});
